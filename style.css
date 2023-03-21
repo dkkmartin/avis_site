@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&family=Roboto:wght@100;300;400;500;700&display=swap');
+@import 'normalize.css';
+
+/** 
+font-family: 'Inter', sans-serif;
+font-family: 'Roboto', sans-serif;
+**/
+:root {
+  --header-bg-color: #eeeeee;
+  --footer-bg-color: #000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: initial;
+  list-style-type: none;
+}
+
+.--faded {
+  opacity: 0.5;
+}
+
+.--red {
+  color: #e30613;
+}
+
+.--14px {
+  font-size: 14px;
+}
+
+.--18px {
+  font-size: 18px;
+}
+
+.--20px {
+  font-size: 20px;
+}
+
+.--22px {
+  font-size: 22px;
+}
+
+.--24px {
+  font-size: 24px;
+}
+
+.--28px {
+  font-size: 28px;
+}
+
+.--44px {
+  font-size: 44px;
+}
+
+/** INDEX **/
+/* Header */
+
+.header {
+  height: 60px;
+  background-color: var(--header-bg-color);
+  padding: 0 2vw;
+  font-family: 'Roboto', sans-serif;
+}
+
+.header__con {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  gap: 5vw;
+}
+
+.nav {
+  display: flex;
+}
+
+.nav__ul {
+  display: flex;
+  gap: 1vw;
+}
+
+.header__link {
+  margin-left: auto;
+}
+
+/** MAIN **/
+
+.index__section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-top: 2em;
+  font-family: 'Inter', sans-serif;
+}
+
+.section__top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.top__section__con {
+  display: flex;
+  flex-direction: column;
+}
+
+.section__middle {
+  display: flex;
+  gap: 2vw;
+}
+
+.middle__section__h1,
+.bottom__section__h1 {
+  margin: 0.2em 0;
+}
+
+.middle__section__h3 {
+  border-bottom: 1px solid #000;
+}
+
+.middle__section__con:nth-child(2) .middle__section__p {
+  padding: 1em 0;
+}
+
+.bottom__section__image {
+  width: 100%;
+}
+
+/** Footer **/
+
+.footer {
+  background-color: var(--footer-bg-color);
+  text-align: center;
+  height: 217px;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  justify-content: center;
+  margin-top: 4em;
+}
+.footer__item {
+  color: #fff;
+}
