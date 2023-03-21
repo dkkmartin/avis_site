@@ -47,12 +47,24 @@ font-family: 'Roboto', sans-serif;
   font-size: 24px;
 }
 
+.--26px {
+  font-size: 26px;
+}
+
 .--28px {
   font-size: 28px;
 }
 
 .--44px {
   font-size: 44px;
+}
+
+.--56px {
+  font-size: 56px;
+}
+
+.--text-center {
+  text-align: center;
 }
 
 /** INDEX **/
@@ -89,7 +101,8 @@ font-family: 'Roboto', sans-serif;
 
 /** MAIN **/
 
-.index__section {
+.index__section,
+.sport__section {
   max-width: 1000px;
   margin: 0 auto;
   padding-top: 2em;
@@ -151,4 +164,28 @@ font-family: 'Roboto', sans-serif;
 }
 .footer__item {
   color: #fff;
+}
+
+/** SPORT **/
+.sport__main {
+  font-family: 'Inter', sans-serif;
+}
+
+.section__hero {
+  padding: 0;
+}
+
+.section__articles {
+  position: relative;
+  bottom: 6em;
+}
+
+.sport__section__item {
+  padding: 1em 0;
+}
+
+.section__articles > .sport__section__item {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
 }
