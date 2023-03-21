@@ -27,6 +27,10 @@ font-family: 'Roboto', sans-serif;
   color: #e30613;
 }
 
+.--10px {
+  font-size: 10px;
+}
+
 .--12px {
   font-size: 12px;
 }
@@ -228,4 +232,18 @@ font-family: 'Roboto', sans-serif;
   position: absolute;
   left: -5em;
   top: 248vh;
+}
+
+/** ABONNEMENT **/
+
+.abonnement__main {
+  font-family: 'Inter', sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.section__top {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
