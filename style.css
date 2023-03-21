@@ -292,7 +292,8 @@ font-family: 'Roboto', sans-serif;
 }
 
 .section__card button,
-.abonnement__section__btn button {
+.abonnement__section__btn button,
+.success__section__bot button {
   background-color: #e30613;
   border: none;
   color: #fff;
@@ -312,9 +313,10 @@ font-family: 'Roboto', sans-serif;
   padding: 1.3em 0;
 }
 
-.abonnement__section__btn button {
+.abonnement__section__btn button,
+.success__section__bot button {
   height: 30px;
-  padding: 0 2em;
+  width: 160px;
 }
 .abonnement__section__bot {
   display: flex;
@@ -334,4 +336,36 @@ button {
 button:hover {
   transform: translateY(-3px);
   background-color: #8f000a;
+}
+
+/** SUCCESS **/
+
+.success__main {
+  font-family: 'Inter', sans-serif;
+  max-width: 1000px;
+  margin: 0 auto;
+  height: 100vh;
+  padding-top: 10vh;
+}
+
+.success__section__top {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.main__logo__con {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+.success__section__bot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  background-color: #eee;
+  margin-top: 10em;
+  padding: 1.3em 0;
 }
