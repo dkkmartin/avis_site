@@ -27,6 +27,10 @@ font-family: 'Roboto', sans-serif;
   color: #e30613;
 }
 
+.--italic {
+  font-style: italic;
+}
+
 .--10px {
   font-size: 10px;
 }
@@ -37,6 +41,10 @@ font-family: 'Roboto', sans-serif;
 
 .--14px {
   font-size: 14px;
+}
+
+.--16px {
+  font-size: 16px;
 }
 
 .--18px {
@@ -91,7 +99,7 @@ font-family: 'Roboto', sans-serif;
   align-items: center;
   max-width: 1000px;
   margin: 0 auto;
-  gap: 5vw;
+  gap: 3vw;
 }
 
 .nav {
@@ -108,6 +116,10 @@ font-family: 'Roboto', sans-serif;
 }
 
 /** MAIN **/
+
+.index__main {
+  padding-bottom: 4em;
+}
 
 .index__section,
 .sport__section {
@@ -168,7 +180,6 @@ font-family: 'Roboto', sans-serif;
   flex-direction: column;
   gap: 1em;
   justify-content: center;
-  margin-top: 4em;
 }
 .footer__item {
   color: #fff;
@@ -222,28 +233,105 @@ font-family: 'Roboto', sans-serif;
   line-height: 16px;
 }
 
-.figcaption--bike {
-  position: absolute;
-  right: -5em;
-  top: 133vh;
-}
-
-.figcaption--map {
-  position: absolute;
-  left: -5em;
-  top: 248vh;
-}
-
 /** ABONNEMENT **/
 
 .abonnement__main {
   font-family: 'Inter', sans-serif;
   max-width: 800px;
   margin: 0 auto;
+  height: 100vh;
 }
 
-.section__top {
+.section__top__heading__con {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+
+.section__top__logo {
+  width: 40%;
+}
+
+.abonnement__section__top {
   display: flex;
   flex-direction: column;
   text-align: center;
+  padding: 3em 0;
+}
+
+.abonnement__section__mid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
+  gap: 2em;
+}
+
+.section__card {
+  padding: 2em 1.2em;
+  display: grid;
+  gap: 2em;
+  background-color: #eee;
+}
+
+.card__con {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.card__content__item {
+  display: flex;
+  gap: 0.5em;
+}
+
+.card__price__con {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  align-self: flex-end;
+}
+
+.section__card button,
+.abonnement__section__btn button {
+  background-color: #e30613;
+  border: none;
+  color: #fff;
+  height: 46px;
+  border-radius: 4px;
+  opacity: 0.9;
+  font-weight: 700;
+}
+
+.abonnement__section__btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  background-color: #eee;
+  margin: 2em 0;
+  padding: 1.3em 0;
+}
+
+.abonnement__section__btn button {
+  height: 30px;
+  padding: 0 2em;
+}
+.abonnement__section__bot {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.read__more,
+button {
+  cursor: pointer;
+}
+
+button {
+  transition: transform 0.2s;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  background-color: #8f000a;
 }
