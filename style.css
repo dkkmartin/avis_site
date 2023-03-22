@@ -401,6 +401,14 @@ button:hover {
   height: 100vh;
 }
 
+.abonnement__section__mid button a {
+  color: #fff;
+}
+
+.abonnement__section__mid button {
+  width: 100%;
+}
+
 .form__section__top {
   display: flex;
   flex-direction: column;
