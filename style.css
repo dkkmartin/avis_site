@@ -19,6 +19,10 @@ font-family: 'Roboto', sans-serif;
   list-style-type: none;
 }
 
+.--bold {
+  font-weight: 700;
+}
+
 .--faded {
   opacity: 0.5;
 }
@@ -113,6 +117,21 @@ font-family: 'Roboto', sans-serif;
 
 .header__link {
   margin-left: auto;
+}
+
+.ul__item,
+.header__link {
+  transition: transform 0.3s ease;
+}
+
+.ul__item:hover,
+.header__link:hover {
+  transform: translateY(-3px);
+}
+
+.ul__link:hover,
+.header__link:hover {
+  color: #464646;
 }
 
 /** MAIN **/
@@ -293,7 +312,8 @@ font-family: 'Roboto', sans-serif;
 
 .section__card button,
 .abonnement__section__btn button,
-.success__section__bot button {
+.success__section__bot button,
+.form__section__bot button {
   background-color: #e30613;
   border: none;
   color: #fff;
@@ -314,7 +334,8 @@ font-family: 'Roboto', sans-serif;
 }
 
 .abonnement__section__btn button,
-.success__section__bot button {
+.success__section__bot button,
+.form__section__bot button {
   height: 30px;
   width: 160px;
 }
@@ -360,7 +381,8 @@ button:hover {
   gap: 1em;
 }
 
-.success__section__bot {
+.success__section__bot,
+.form__section__bot {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -368,4 +390,116 @@ button:hover {
   background-color: #eee;
   margin-top: 10em;
   padding: 1.3em 0;
+}
+
+/** FORM **/
+
+.form__main {
+  font-family: 'Inter', sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+.form__section__top {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 3em 0;
+}
+
+.form__group__con {
+  background-color: #eee;
+  padding: 7% 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.signup__form {
+  display: grid;
+  grid-template-columns: 2.5fr 1fr;
+  gap: 2em;
+}
+
+.form__inputs {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  row-gap: 1em;
+  column-gap: 3em;
+}
+
+.form__inputs label {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 1em;
+}
+
+.form__inputs label::after {
+  content: ' *';
+  color: red;
+}
+
+.signup__form input {
+  border: none;
+  height: 23px;
+}
+
+.form__checkbox {
+  padding-left: 6em;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  row-gap: 1em;
+  column-gap: 0.5em;
+}
+
+.form__checkbox input {
+  justify-self: end;
+}
+
+.form__price__con {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.form__price__info {
+  background-color: #eee;
+  padding: 7% 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  line-height: 16px;
+}
+.border__con {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.rabat {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.normalpris,
+.rabat,
+.pris__i__alt {
+  display: flex;
+  justify-content: space-between;
+  padding: 4% 0;
+}
+
+.form__submit {
+  background-color: #e30613;
+  border: none;
+  color: #fff;
+  height: 46px;
+  border-radius: 4px;
+  opacity: 0.9;
+  font-weight: 700;
+}
+
+.form__section__bot {
+  margin-top: 5em;
 }
