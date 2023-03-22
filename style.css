@@ -153,13 +153,23 @@ font-family: 'Roboto', sans-serif;
 }
 
 .section__top {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1em;
 }
 
 .top__section__con {
   display: flex;
   flex-direction: column;
+}
+
+.section__image__con {
+  max-width: 100%;
+  height: auto;
+}
+
+.section__top__img {
+  width: 100%;
 }
 
 .section__middle {
@@ -552,8 +562,14 @@ button:hover {
     padding: 1em 2vw;
   }
 
+  .top__section__con {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
   .section__top img {
-    display: none;
+    max-width: 100%;
+    height: 100%;
   }
 
   .section__top {
@@ -563,16 +579,49 @@ button:hover {
     gap: 1em;
   }
 
-  .top__section__con {
-    display: grid;
-    grid-template-columns: 1fr;
+  .section__image__con,
+  .section__top__h4 {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+  }
+
+  .section__top__h4 {
+    font-size: 0.7em;
+    align-self: end;
     background-color: #eee;
-    border-radius: 5px;
-    padding: 2%;
+    text-align: center;
+    opacity: 0.8;
   }
 
   .section__middle {
     flex-direction: column;
     gap: 3em;
+  }
+
+  /** FOOTER **/
+
+  .footer {
+    height: initial;
+    padding: 1em 0;
+  }
+
+  /** SPORT **/
+
+  .section__hero__image {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .section__articles {
+    position: static;
+    padding: 0 2vw;
+  }
+
+  .section__item__writer {
+    line-height: normal;
+  }
+
+  .section__item__figcaption {
+    max-width: fit-content;
   }
 }
