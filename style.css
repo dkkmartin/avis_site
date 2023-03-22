@@ -624,4 +624,27 @@ button:hover {
   .section__item__figcaption {
     max-width: fit-content;
   }
+
+  /** ABONNEMENT **/
+
+  .abonnement__main {
+    height: initial;
+    padding: 0 2vw;
+  }
+
+  .section__top__heading__con {
+    flex-direction: column;
+    gap: 0.5em;
+  }
+  .section__top__logo {
+    width: 80%;
+  }
+
+  .abonnement__section__mid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card__con {
+  }
 }
