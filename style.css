@@ -141,7 +141,7 @@ font-family: 'Roboto', sans-serif;
 /** MAIN **/
 
 .index__main {
-  padding-bottom: 4em;
+  padding: 0 2vh 4em 2vh;
 }
 
 .index__section,
@@ -480,6 +480,10 @@ button:hover {
   justify-self: end;
 }
 
+.form__checkbox label {
+  align-self: center;
+}
+
 .form__price__con {
   display: flex;
   flex-direction: column;
@@ -529,12 +533,32 @@ button:hover {
 /** MEDIA QUERIES **/
 
 /** TABLET **/
-
 @media only screen and (max-width: 800px) {
+  /** HEADER **/
+
+  .header {
+    display: none;
+  }
+
+  .header__mobile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .fa-bars {
+    font-size: 1.5em;
+  }
+
+  /** SPORT **/
+
+  .sport__section__item:nth-child(1) {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 10%);
+  }
 }
 
 /** MOBILE **/
-
 @media only screen and (max-width: 480px) {
   /* HEADER */
 
@@ -646,5 +670,55 @@ button:hover {
   }
 
   .card__con {
+    justify-self: center;
+  }
+
+  .abonnement__section__bot {
+    padding: 2em 0;
+  }
+
+  /** FORM **/
+
+  .form__main {
+    height: initial;
+    padding: 0 2vw;
+  }
+
+  .signup__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form__inputs {
+    grid-template-columns: 1fr 1.5fr;
+    column-gap: 1.5em;
+  }
+
+  .form__inputs label {
+    gap: 0.5em;
+  }
+
+  .form__price__con {
+    gap: 3em;
+  }
+
+  .form__section__bot {
+    margin: 5em 0;
+  }
+
+  /** SUCCESS **/
+
+  .success__main {
+    padding: 10vh 2vw;
+  }
+
+  .success__section__top {
+    gap: 2em;
+  }
+
+  .main__logo__con {
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
   }
 }
