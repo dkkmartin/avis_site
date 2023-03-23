@@ -31,6 +31,10 @@ font-family: 'Roboto', sans-serif;
   color: #e30613;
 }
 
+.--hide {
+  display: none;
+}
+
 .--italic {
   font-style: italic;
 }
@@ -88,7 +92,7 @@ font-family: 'Roboto', sans-serif;
 }
 
 /** INDEX **/
-/* Header */
+/* HEADER */
 
 .header__mobile {
   display: none;
@@ -824,5 +828,47 @@ button:hover {
 
   .form__inputs {
     grid-template-columns: 1fr 2fr;
+  }
+}
+
+/** MODAL **/
+@media only screen and (max-width: 800px) {
+  .fa-bars {
+    position: absolute;
+    top: 15px;
+    right: 0;
+    padding: 0 2vw;
+  }
+
+  .header__logo__con {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    padding: 0 2vw;
+  }
+
+  .header--expand {
+    height: 40vh;
+    justify-content: center;
+  }
+
+  .modal--active {
+    display: block;
+  }
+
+  .nav__ul__mobile {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 2em;
+    column-gap: 5em;
+    padding-top: 3em;
+  }
+
+  .ul__item {
+    max-width: 100%;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 10%;
   }
 }
