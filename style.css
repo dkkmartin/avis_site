@@ -142,7 +142,8 @@ font-family: 'Roboto', sans-serif;
 
 .ul__link:hover,
 .header__link:hover {
-  color: #464646;
+  color: #e30613;
+  font-weight: 700;
 }
 
 /** MAIN **/
