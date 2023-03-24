@@ -558,7 +558,7 @@ button:hover {
     justify-content: space-between;
   }
 
-  .fa-bars {
+  .fa-solid {
     font-size: 1.5em;
   }
 
@@ -654,7 +654,7 @@ button:hover {
     justify-content: space-between;
   }
 
-  .fa-bars {
+  .fa-solid {
     font-size: 2em;
   }
 
@@ -841,7 +841,7 @@ button:hover {
     font-family: 'Roboto', sans-serif;
   }
 
-  .fa-bars {
+  .fa-solid {
     position: absolute;
     top: 15px;
     right: 0;
@@ -859,8 +859,6 @@ button:hover {
     display: flex;
     justify-content: center;
     position: relative;
-    animation-duration: 1s;
-    animation-name: navbarExtend;
     z-index: 1;
   }
 
@@ -868,7 +866,7 @@ button:hover {
     display: grid;
     grid-template-columns: repeat(3, minmax(105px, 1fr));
     row-gap: 2em;
-    column-gap: 3em;
+    column-gap: 3vw;
     padding: 2em 0;
   }
 
@@ -895,27 +893,5 @@ button:hover {
 
   .ul__item:nth-child(7) .ul__link {
     color: #fff;
-  }
-}
-
-/** KEYFRAME **/
-
-@keyframes navbarExtend {
-  0% {
-    transform: translateY(-100%);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
-}
-
-@keyframes navbarRetract {
-  0% {
-    transform: translateY(0);
-  }
-
-  100% {
-    transform: translateY(-100%);
   }
 }
