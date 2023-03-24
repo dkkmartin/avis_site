@@ -165,8 +165,9 @@ font-family: 'Roboto', sans-serif;
 
 .section__top {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(100px, 1fr));
   gap: 1em;
+  overflow: hidden;
 }
 
 .top__section__con {
@@ -818,6 +819,17 @@ button:hover {
 }
 
 /** MISC **/
+
+/** MISC INDEX__SECTION__TOP **/
+
+@media only screen and (min-width: 481px) and (max-width: 620px) {
+  .section__top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 1fr 1fr;
+    gap: 1em;
+  }
+}
 
 /** MISC FORM **/
 @media only screen and (min-width: 481px) and (max-width: 580px) {
