@@ -98,7 +98,7 @@ font-family: 'Roboto', sans-serif;
 .header__mobile {
   display: none;
   position: relative;
-  z-index: 2;
+  z-index: 3;
 }
 
 .header {
@@ -148,7 +148,11 @@ font-family: 'Roboto', sans-serif;
 /** MAIN **/
 
 .index__main {
-  padding: 0 2vw 4em 2vw;
+  padding-bottom: 4em;
+}
+
+.index__section {
+  padding: 0 2vw;
 }
 
 .index__section,
@@ -327,6 +331,7 @@ font-family: 'Roboto', sans-serif;
 .card__content__item {
   display: flex;
   gap: 0.5em;
+  align-items: center;
 }
 
 .card__price__con {
@@ -392,13 +397,13 @@ button:hover {
   max-width: 1000px;
   margin: 0 auto;
   height: 100vh;
-  padding-top: 10vh;
 }
 
 .success__section__top {
   display: flex;
   flex-direction: column;
   text-align: center;
+  padding-top: 6em;
 }
 
 .main__logo__con {
@@ -414,8 +419,8 @@ button:hover {
   align-items: center;
   gap: 1em;
   background-color: #eee;
-  margin-top: 10em;
-  padding: 1.3em 0;
+  margin: 10em 2vw 0 2vw;
+  padding: 1.3em 2vw;
 }
 
 /** FORM **/
@@ -593,14 +598,25 @@ button:hover {
   /** ABONNEMENT **/
   .abonnement__main {
     height: initial;
+  }
+
+  .abonnement__section__mid {
     padding: 0 2vw;
   }
 
   .abonnement__section__bot {
-    padding: 2em 0;
+    padding: 2em 2vw;
+  }
+
+  .abonnement__section__btn {
+    margin: 2em 2vw;
   }
 
   /** FORM **/
+
+  .section__form {
+    padding: 0 2vw;
+  }
 
   .section__top__heading__con {
     flex-direction: column;
@@ -611,7 +627,6 @@ button:hover {
   }
 
   .form__main {
-    padding: 0 2vw;
     height: initial;
   }
 
@@ -621,14 +636,10 @@ button:hover {
   }
 
   .form__section__bot {
-    margin-bottom: 5em;
+    margin: 5em 2vw;
   }
 
   /** SUCCESS **/
-
-  .success__main {
-    padding: 10vh 2vw 0 2vh;
-  }
 
   .main__logo__con {
     flex-direction: column;
@@ -735,7 +746,13 @@ button:hover {
 
   .abonnement__main {
     height: initial;
+  }
+  .abonnement__section__mid {
     padding: 0 2vw;
+  }
+
+  .abonnement__section__bot {
+    padding: 2em 2vw;
   }
 
   .section__top__heading__con {
@@ -755,14 +772,13 @@ button:hover {
     justify-self: center;
   }
 
-  .abonnement__section__bot {
-    padding: 2em 0;
-  }
-
   /** FORM **/
 
   .form__main {
     height: initial;
+  }
+
+  .section__form {
     padding: 0 2vw;
   }
 
@@ -785,14 +801,10 @@ button:hover {
   }
 
   .form__section__bot {
-    margin: 5em 0;
+    margin: 5em 2vw;
   }
 
   /** SUCCESS **/
-
-  .success__main {
-    padding: 10vh 2vw;
-  }
 
   .success__section__top {
     gap: 2em;
@@ -813,12 +825,16 @@ button:hover {
     height: initial;
   }
 
+  .section__form {
+    padding: 0 2vw;
+  }
+
   .form__price__con {
     gap: 3em;
   }
 
   .form__section__bot {
-    margin: 5em 0;
+    margin: 5em 2vw;
   }
 
   .signup__form {
@@ -841,6 +857,24 @@ button:hover {
     font-family: 'Roboto', sans-serif;
   }
 
+  .header__modal {
+    position: absolute;
+    z-index: 2;
+    width: 100vw;
+  }
+
+  .overlay {
+    z-index: 1;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  .overlay--active {
+    display: block;
+  }
+
   .fa-solid {
     position: absolute;
     top: 15px;
@@ -858,8 +892,6 @@ button:hover {
   .modal--active {
     display: flex;
     justify-content: center;
-    position: relative;
-    z-index: 1;
   }
 
   .nav__ul__mobile {
