@@ -5,6 +5,7 @@
 font-family: 'Inter', sans-serif;
 font-family: 'Roboto', sans-serif;
 **/
+
 :root {
   --header-bg-color: #eeeeee;
   --footer-bg-color: #000;
@@ -96,6 +97,8 @@ font-family: 'Roboto', sans-serif;
 
 .header__mobile {
   display: none;
+  position: relative;
+  z-index: 2;
 }
 
 .header {
@@ -833,6 +836,11 @@ button:hover {
 
 /** MODAL **/
 @media only screen and (max-width: 800px) {
+  .modal {
+    background-color: #eee;
+    font-family: 'Roboto', sans-serif;
+  }
+
   .fa-bars {
     position: absolute;
     top: 15px;
@@ -847,21 +855,21 @@ button:hover {
     padding: 0 2vw;
   }
 
-  .header--expand {
-    height: 40vh;
-    justify-content: center;
-  }
-
   .modal--active {
-    display: block;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    animation-duration: 1s;
+    animation-name: navbarExtend;
+    z-index: 1;
   }
 
   .nav__ul__mobile {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, minmax(105px, 1fr));
     row-gap: 2em;
-    column-gap: 5em;
-    padding-top: 3em;
+    column-gap: 3em;
+    padding: 2em 0;
   }
 
   .ul__item {
@@ -870,5 +878,44 @@ button:hover {
     border: 1px solid black;
     border-radius: 3px;
     padding: 10%;
+  }
+
+  .ul__item:nth-child(1n + 6) {
+    padding: 10% 0;
+  }
+
+  .ul__item:nth-child(1n + 7) {
+    grid-column: 1 / -1;
+    background-color: #e30613;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.5em;
+    font-weight: 700;
+  }
+
+  .ul__item:nth-child(7) .ul__link {
+    color: #fff;
+  }
+}
+
+/** KEYFRAME **/
+
+@keyframes navbarExtend {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes navbarRetract {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-100%);
   }
 }
