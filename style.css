@@ -32,6 +32,11 @@ font-family: 'Roboto', sans-serif;
   color: #e30613;
 }
 
+.--active {
+  color: #e30613;
+  font-weight: 700;
+}
+
 .--hide {
   display: none;
 }
