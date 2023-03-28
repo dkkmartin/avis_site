@@ -6,6 +6,7 @@ function delay(time) {
   return new Promise(resolve => setTimeout(resolve, time))
 }
 
+
 menuBtnOpen.addEventListener('click', () => {
   if(modal.classList.contains('modal--active')) {
     modal.classList.remove('animate__slideInDown')

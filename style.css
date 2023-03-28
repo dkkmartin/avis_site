@@ -278,6 +278,27 @@ font-family: 'Roboto', sans-serif;
   line-height: 26px;
 }
 
+.sport__section__item:nth-child(3),
+.sport__section__item:nth-child(5) {
+  max-width: 1000px;
+  position: relative;
+  right: -4.5em;
+}
+
+.sport__section__item:nth-child(5) {
+  left: -4.5em;
+}
+
+.figure__map {
+  flex-direction: row-reverse;
+}
+
+.sport__section__item figure {
+  display: flex;
+  align-items: end;
+  gap: 1em;
+}
+
 .section__item__image,
 .section__item__iframe {
   width: 100%;
