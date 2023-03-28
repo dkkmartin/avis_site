@@ -2,6 +2,10 @@ const btn1 = document.querySelector('.selection__1')
 const btn2 = document.querySelector('.selection__2')
 const btn3 = document.querySelector('.selection__3')
 
+window.addEventListener('load', () => {
+  localStorage.clear()
+})
+
 const priceInfo_db = [
   {
     title: "Digital",
