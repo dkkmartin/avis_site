@@ -2,12 +2,9 @@ const menuBtnOpen = document.querySelector('.fa-solid')
 const modal = document.querySelector('.modal')
 const overlay = document.querySelector('.overlay')
 
-
 function delay(time) {
   return new Promise(resolve => setTimeout(resolve, time))
 }
-
-
 
 menuBtnOpen.addEventListener('click', () => {
   if(modal.classList.contains('modal--active')) {
