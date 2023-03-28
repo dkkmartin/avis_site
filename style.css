@@ -451,6 +451,10 @@ button:hover {
   padding: 1.3em 2vw;
 }
 
+.form__section__bot {
+  margin: 0;
+}
+
 /** FORM **/
 
 .form__main {
