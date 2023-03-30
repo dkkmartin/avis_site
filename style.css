@@ -280,7 +280,6 @@ font-family: 'Roboto', sans-serif;
 
 .sport__section__item:nth-child(3),
 .sport__section__item:nth-child(5) {
-  max-width: 1000px;
   position: relative;
   right: -4.5em;
 }
@@ -627,6 +626,16 @@ button:hover {
     max-width: fit-content;
   }
 
+  .sport__section__item:nth-child(3),
+  .sport__section__item:nth-child(5) {
+    position: static;
+  }
+
+  .figure__image,
+  .figure__map {
+    flex-direction: column;
+  }
+
   /** ABONNEMENT **/
   .abonnement__main {
     height: initial;
@@ -772,6 +781,17 @@ button:hover {
 
   .section__item__figcaption {
     max-width: fit-content;
+  }
+
+  .sport__section__item:nth-child(3),
+  .sport__section__item:nth-child(5) {
+    position: static;
+    padding: 0;
+  }
+
+  .figure__image,
+  .figure__map {
+    flex-direction: column;
   }
 
   /** ABONNEMENT **/
