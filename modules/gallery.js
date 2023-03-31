@@ -1,20 +1,20 @@
-const imgBox = document.querySelector('.section__item__image')
+const images = Array.from(document.querySelectorAll('.section__item__image'))
 const leftArrow = document.querySelector('.fa-chevron-left')
 const rightArrow = document.querySelector('.fa-chevron-right')
 let index = 0;
 
 const img_db = [
+  'billede-af-th-g-fra-pixabay-1.webp',
   'tour-de-france-leader-in-yellow.webp',
   'tour-de-france-feltet.webp',
   'tour-de-france-bil-cykler.webp',
-  'billede-af-th-g-fra-pixabay-1.webp'
 ]
 
 function rightClick() {
-  if (index === 3) {
-    index = 0
-  } else {
+  if (index < 3) {
     index++
+  } else {
+    index = 0
   }
 }
 
@@ -26,14 +26,42 @@ function leftClick() {
   }
 }
 
+function delay(time) {
+  return new Promise(resolve => setTimeout(resolve, time))
+}
+
+function nextImageAnimation() {
+  images[index].classList.add('prev__active')
+  delay(490).then(() => {
+    images[index].classList.remove('current__image')
+    images[index].classList.remove('prev__active')
+    rightClick()
+    images[index].classList.add('current__image')
+    images[index].classList.add('next__active')
+    delay(490).then(() => {
+      images[index].classList.remove('next__active')
+    })
+  })
+}
+
+function previousImageAnimation() {
+  images[index].classList.add('prev__active')
+  delay(490).then(() => {
+    images[index].classList.remove('current__image')
+    images[index].classList.remove('prev__active')
+    leftClick()
+    images[index].classList.add('current__image')
+    images[index].classList.add('next__active')
+    delay(490).then(() => {
+      images[index].classList.remove('next__active')
+    })
+  })
+}
+
 rightArrow.addEventListener('click', () => {
-  imgBox.setAttribute('src', 'assets/images/sport/'+img_db[index])
-  rightClick()
-  console.log(index)
+  nextImageAnimation()
 })
 
 leftArrow.addEventListener('click', () => {
-  imgBox.setAttribute('src', 'assets/images/sport/'+img_db[index])
-  leftClick()
-  console.log(index)
+  previousImageAnimation()
 })

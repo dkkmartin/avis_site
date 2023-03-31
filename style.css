@@ -237,6 +237,11 @@ font-family: 'Roboto', sans-serif;
 }
 
 /** SPORT **/
+
+.figure__image {
+  overflow: hidden;
+}
+
 .sport__main {
   font-family: 'Inter', sans-serif;
 }
@@ -1009,5 +1014,40 @@ button:hover {
 
   .ul__item:nth-child(7) .ul__link {
     color: #fff;
+  }
+}
+
+/** KEYFRAMES **/
+
+.current__image {
+  display: block;
+}
+.prev__active {
+  animation: slide_left 0.5s;
+}
+
+@keyframes slide_left {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+
+.next__active {
+  animation: slide_right 0.5s;
+}
+
+@keyframes slide_right {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
