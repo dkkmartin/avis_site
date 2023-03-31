@@ -45,15 +45,15 @@ function nextImageAnimation() {
 }
 
 function previousImageAnimation() {
-  images[index].classList.add('prev__active')
+  images[index].classList.add('prev__active__reverse')
   delay(490).then(() => {
     images[index].classList.remove('current__image')
-    images[index].classList.remove('prev__active')
+    images[index].classList.remove('prev__active__reverse')
     leftClick()
     images[index].classList.add('current__image')
-    images[index].classList.add('next__active')
+    images[index].classList.add('next__active__reverse')
     delay(490).then(() => {
-      images[index].classList.remove('next__active')
+      images[index].classList.remove('next__active__reverse')
     })
   })
 }
