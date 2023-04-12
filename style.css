@@ -96,6 +96,23 @@ font-family: 'Roboto', sans-serif;
 .--text-center {
   text-align: center;
 }
+/** GPT BTN **/
+.gpt__btn {
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid black;
+  background-color: rgba(255, 255, 255, 0.5);
+  opacity: 0.5;
+}
+
+.gpt__btn:hover {
+  opacity: 1;
+  background-color: white;
+}
 
 /** INDEX **/
 /* HEADER */
