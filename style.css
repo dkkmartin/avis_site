@@ -663,9 +663,13 @@ button:hover {
     flex-direction: column;
   }
 
+  .sport__section__item figcaption {
+    align-self: flex-start;
+  }
+
   .fa-chevron-left,
   .fa-chevron-right {
-    display: none;
+    display: none !important;
   }
 
   /** ABONNEMENT **/
